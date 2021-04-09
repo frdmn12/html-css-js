@@ -9,7 +9,6 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-  
 	height: 100vh;
 	margin: 0 10vh;
 	transition: background 0.2s linear;
