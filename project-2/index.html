@@ -1,0 +1,47 @@
+<!-- Guess Odd number -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guess even or odd numbers</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Guess even or odd numbers</h1>
+      <!-- input Number -->
+      <div class="inputNumber">
+        <input type="number" id="number" placeholder="Fill the number" />
+        <button onclick="guessNumber()">GO</button>
+      </div>
+      <!-- input Number -->
+
+      <!-- result -->
+      <h3>Result down here</h3>
+      <h3 id="result"></h3>
+      <!-- result -->
+    </div>
+  </body>
+  <script>
+    function guessNumber() {
+      const number = document.getElementById("number").value;
+      const parseNumber = parseInt(number);
+      if (parseNumber % 2 === 0) {
+        let replace = `${number} is an even number`;
+
+        document.getElementById("result").innerHTML = replace;
+        // alert("genap");
+      } else if (parseNumber % 3 === 0) {
+        let replace = `${number} is an odd number`;
+
+        document.getElementById("result").innerHTML = replace;
+        // alert("ganjil");
+      } else {
+        alert("Please fill in the numbers first");
+      }
+      //   console.log(number);
+    }
+  </script>
+</html>
